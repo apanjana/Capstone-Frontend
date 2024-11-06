@@ -1,0 +1,40 @@
+<div class="modal-overlay" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="close()">&times;</button>
+      <h2>{{ isLogin ? 'Login' : 'Sign Up' }}</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group" *ngIf="!isLogin">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+        </div>
+        <div class="form-group" *ngIf="!isLogin">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <div class="form-group" *ngIf="!isLogin">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber" required>
+        </div>
+        <div class="form-group" *ngIf="!isLogin">
+          <label for="role">Role</label>
+          <select id="role" name="role" [(ngModel)]="role" required>
+            <option value="USER">User</option>
+            <option value="ADMIN">Admin</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-button">{{ isLogin ? 'Login' : 'Sign Up' }}</button>
+      </form>
+      <p class="switch-mode" (click)="toggleMode()">
+        {{ isLogin ? 'Need an account? Sign up' : 'Already have an account? Login' }}
+      </p>
+    </div>
+  </div>
+  

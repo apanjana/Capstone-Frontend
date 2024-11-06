@@ -1,0 +1,21 @@
+.map-form {
+  margin-bottom: 20px;
+}
+
+.map-form label {
+  margin-right: 10px;
+}
+
+.map-form input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+#mapContainer {
+  height: 500px;
+  width: 100%;
+}

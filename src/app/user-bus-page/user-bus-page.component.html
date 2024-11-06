@@ -1,0 +1,58 @@
+<app-navbar-user></app-navbar-user>
+<div class="bus-page">
+  <h2>Available Buses</h2>
+
+  <button class="btn-show-buses" (click)="getAllBuses()">Show All Buses</button>
+
+  <div *ngIf="buses.length > 0">
+    <h3>List of Buses</h3>
+    <div class="bus-list">
+      <div class="bus-card" *ngFor="let bus of buses">
+        <strong>{{ bus.busName }}</strong>
+        <p>Capacity: {{ bus.capacity }}</p>
+        <p>Occupancy: {{ bus.occupancy }}</p>
+        <p>Current Location: {{ bus.currentLocation }}</p>
+        <p>Routes: {{ bus.routes.join(', ') }}</p>
+        <p>Scheduled Arrival: {{ bus.scheduledArrivalTime }} hrs</p>
+        <p>Actual Arrival: {{ bus.actualArrivalTime }} hrs</p>
+        <p class="status" [ngClass]="bus.operating ? 'operating' : 'not-operating'">
+          Operating: {{ bus.operating ? 'Yes' : 'No' }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="buses.length === 0">
+    <p>No buses available.</p>
+  </div>
+
+  <hr>
+
+  <!-- New inputs for start and end routes -->
+  <h2>Find Buses by Route Pattern</h2>
+  <input type="text" [(ngModel)]="startRoute" placeholder="Enter Start Route" class="route-input" />
+  <input type="text" [(ngModel)]="endRoute" placeholder="Enter End Route" class="route-input" />
+  <button class="btn-show-buses" (click)="getBusesByRoutePattern()">Find Buses</button>
+
+  <div *ngIf="filteredBuses.length > 0">
+    <h3>Buses from {{ startRoute }} to {{ endRoute }}</h3>
+    <div class="bus-list">
+      <div class="bus-card" *ngFor="let bus of filteredBuses">
+        <strong>{{ bus.busName }}</strong>
+        <p>Capacity: {{ bus.capacity }}</p>
+        <p>Occupancy: {{ bus.occupancy }}</p>
+        <p>Current Location: {{ bus.currentLocation }}</p>
+        <p>Routes: {{ bus.routes.join(', ') }}</p>
+        <p>Scheduled Arrival: {{ bus.scheduledArrivalTime }} hrs</p>
+        <p>Actual Arrival: {{ bus.actualArrivalTime }} hrs</p>
+        <p class="status" [ngClass]="bus.operating ? 'operating' : 'not-operating'">
+          Operating: {{ bus.operating ? 'Yes' : 'No' }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="filteredBuses.length === 0 && startRoute && endRoute">
+    <p>No buses available from "{{ startRoute }}" to "{{ endRoute }}".</p>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+/* Basic styling for the navbar */
+nav {
+    background-color: rgb(22, 56, 26, 0.7); /* Dark background for the navbar */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around; /* Distribute links evenly */
+    align-items: center;
+    position: sticky; /* Sticks to the top on scroll */
+    top: 0;
+    z-index: 1000;
+    height:80px;
+  }
+
+  nav a {
+    color: white; /* White text color for the links */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+  }
+
+  nav a:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #ffcc00; /* Highlight color for the text on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+  }
+
+  nav a.active {
+    background-color: #ffcc00; /* Highlight the active link */
+    color: #333; /* Dark text for the active link */
+    border-radius: 5px;
+  }
+
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack the links vertically on small screens */
+      padding: 20px;
+    }
+
+    nav a {
+      padding: 10px 0; /* More padding for touch-friendly links */
+      width: 100%; /* Make links take the full width */
+      text-align: center; /* Center-align the links */
+    }
+  }

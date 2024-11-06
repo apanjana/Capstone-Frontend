@@ -1,0 +1,28 @@
+<app-navbar-user></app-navbar-user>
+<div class="profile-container" *ngIf="user">
+  <h2>User Profile</h2>
+
+  <div class="user-info">
+    <p><strong>First Name :</strong></p>
+    <p>{{ user.firstName }}</p>
+  </div>
+
+  <div class="user-info">
+    <p><strong>Last Name :</strong></p>
+    <p>{{ user.lastName }}</p>
+  </div>
+
+  <div class="user-info">
+    <p><strong>Email :</strong></p>
+    <p>{{ user.email }}</p>
+  </div>
+
+  <div class="user-info">
+    <p><strong>Role :</strong></p>
+    <p>{{ user.role }}</p>
+  </div>
+</div>
+
+<div *ngIf="!user" class="no-profile">
+  <p>No user profile available. Please log in.</p>
+</div>

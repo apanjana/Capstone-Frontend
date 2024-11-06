@@ -1,0 +1,96 @@
+/* Main container to center the form */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  
+ 
+}
+
+/* User box styling for a centered form */
+/* Container for the form with a lightened background */
+.user-box {
+  position: relative; /* Set relative positioning for the pseudo-element */
+  padding: 100px;
+  border-radius: 8px;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+  width: 400px;
+  text-align: center;
+  overflow: hidden;
+   /* Ensure the pseudo-element doesn't overflow the box */
+   background: rgba(255, 255, 255, 0.7);
+}
+
+/* Background with blend */
+.user-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Adjust opacity to make it lighter */
+  z-index: -1; /* Keep it behind the form content */
+
+}
+
+/* Heading for the form */
+.user-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form section styling */
+.form-section {
+  margin-bottom: 20px;
+}
+
+/* Label and input styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #425d6f;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+  background-color: #425e6c; /* Green button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ed9368;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 500px) {
+  .user-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<!-- <h1>WELCOME TO THE ADMIN PAGE</h1> -->
+<!-- <h3>MANAGE BUSES AND USERS FROM HERE</h3> -->
+<div class="mainPage">
+    
+    <section class="notifications">
+        <h2>NOTIFICATIONS</h2>
+        <ul>
+          <li *ngFor="let notification of notifications">
+            {{ notification.message }}
+            <button (click)="viewNotification(notification.id)">View</button>
+          </li>
+        </ul>
+      </section>
+</div>

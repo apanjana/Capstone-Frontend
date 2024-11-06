@@ -1,0 +1,20 @@
+<app-navbar-user></app-navbar-user>
+
+<div class="userMain">
+    <div class="welcome">
+        <h1>Welcome, {{ username }}!</h1>
+    </div>
+    <div class="dashboard">
+        <h2>Quick Access</h2>
+        <nav>
+            <a routerLink="/user/bus">View Available Buses</a>
+            <a routerLink="/user/book">Book a Bus Ticket</a>
+        </nav>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-container">
+        <h2>Your Location</h2>
+        <app-map></app-map> <!-- Add the MapComponent here -->
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<app-navbar-user></app-navbar-user>
+<div class="bus-book-page">
+  <h2>Book a Bus</h2>
+
+  <label for="busId">Bus ID:</label>
+  <input
+    type="number"
+    id="busId"
+    [(ngModel)]="busId"
+    placeholder="Enter bus ID"
+  />
+
+  <label for="passengerName">Passenger Name:</label>
+  <input
+    type="text"
+    id="passengerName"
+    [(ngModel)]="passengerName"
+    placeholder="Enter passenger name"
+  />
+
+  <button class="btn-add-passenger" (click)="addPassenger()">Book Bus</button>
+
+  <div *ngIf="bookingSuccess" class="success-message">
+    Bus booked successfully!
+  </div>
+
+  <div *ngIf="bookingError" class="error-message">
+    {{ bookingError }}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <section class="user-box">
+    <h2>Manage Passenger</h2>
+    <form (ngSubmit)="deleteById()" class="form-section">
+      <label for="passengerId">Delete Passenger:</label>
+      <input type="number" id="passengerId" [(ngModel)]="passenger.passengerId" name="passengerId" required>
+      <button type="submit">Delete Passenger</button>
+    </form>
+
+    <!-- <form (ngSubmit)="updatePassenger()" class="form-section">
+      <label for="updatePassengerId">Update Passenger:</label>
+      <input type="number" id="updatePassengerId" [(ngModel)]="passenger.updateId" name="updatePassengerId" required>
+      <button type="submit">Update Passenger</button>
+    </form> -->
+    <form (ngSubmit)="updatePassenger()" class="form-section">
+      <label for="updatePassengerId">Passenger ID:</label>
+      <input type="number" id="updatePassengerId" [(ngModel)]="passenger.updatedId" name="updatePassengerId" required>
+
+      <label for="updatePassengerName">Passenger Name:</label>
+      <input type="text" id="updatePassengerName" [(ngModel)]="passenger.updateName" name="updatePassengerName" required>
+
+      <label for="updatePassengerBusId">Bus ID:</label>
+      <input type="number" id="updatePassengerBusId" [(ngModel)]="passenger.updateBusId" name="updatePassengerBusId" required>
+
+      <button type="submit">Update Passenger</button>
+    </form>
+  </section>
+</div>

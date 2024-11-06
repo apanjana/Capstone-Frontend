@@ -1,0 +1,99 @@
+.bus-page {
+  max-width: 900px;
+   margin: 0 auto;
+   padding: 50px;
+   background: rgba(142, 170, 181, 0.7);
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgb(249 251 240);
+}
+
+h2 {
+ text-align: center;
+ color: #4a6771;
+}
+
+.btn-show-buses {
+ display: block;
+   margin: 0 auto 20px;
+   padding: 10px 20px;
+   background: rgba(249, 251, 240, 0.7);
+   color: #4a6771;
+   border: none;
+   border-radius: 7px;
+   cursor: pointer;
+}
+
+.btn-show-buses:hover {
+ background-color: black;
+}
+
+.bus-list {
+ display: grid;
+ grid-template-columns: 1fr 1fr; /* Two cards per row */
+ gap: 20px;
+ justify-content: space-between;
+}
+
+.bus-card {
+  background: rgba(249, 251, 240, 0.7);
+ background-image: url('/assets/newback.jpeg');
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgb(18 18 18);
+}
+
+h3 {
+ grid-column: 1 / -1; /* Take full width */
+ text-align: center;
+}
+
+.route-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  background: rgba(249, 251, 240, 0.7);
+}
+
+.route-input:focus {
+  border-color: #4a6771;
+  outline: none;
+}
+
+
+.bus-card h4 {
+ margin-top: 0;
+ font-size: 1.5rem;
+ color: #4a6771;
+}
+
+.bus-card p {
+ margin: 5px 0;
+ color: #555;
+}
+
+.status {
+ font-weight: bold;
+ padding: 5px 10px;
+ border-radius: 4px;
+}
+
+.operating {
+ background-color: #28a745;
+ color: white;
+}
+
+.not-operating {
+ background-color: #dc3545;
+ color: white;
+}
+
+/* Ensure layout adapts well on small screens */
+@media (max-width: 600px) {
+ .bus-list {
+   grid-template-columns: 1fr; /* One card per row on smaller screens */
+ }
+}

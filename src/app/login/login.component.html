@@ -1,0 +1,76 @@
+<div class="login-wrap">
+  <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+      <label for="tab-1" class="tab">Sign In</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up">
+      <label for="tab-2" class="tab">Sign Up</label>
+      <div class="login-form">
+
+          <!-- Sign In Form -->
+          <div class="sign-in-htm">
+              <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+                  <div class="group">
+                      <label for="email" class="label">Email</label>
+                      <input id="email" type="text" formControlName="email" class="input" placeholder="annu@gmail.com">
+                  </div>
+                  <div class="group">
+                      <label for="password" class="label">Password</label>
+                      <input id="password" type="password" formControlName="password" class="input" placeholder="user" data-type="password">
+                  </div>
+                  <div class="group">
+                      <input id="check" type="checkbox" class="check" checked>
+                      <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                  </div>
+                  <div class="group">
+                      <input type="submit" class="button" value="Sign In">
+                  </div>
+              </form>
+              <div class="hr"></div>
+              <div class="foot-lnk">
+                  <a href="#forgot">Forgot Password?</a>
+              </div>
+          </div>
+
+          <!-- Sign Up Form -->
+          <div class="sign-up-htm">
+              <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                  <div class="group">
+                      <label for="firstName" class="label">First Name</label>
+                      <input id="firstName" type="text" formControlName="firstName" class="input" placeholder="Annu">
+                  </div>
+                  <div class="group">
+                      <label for="lastName" class="label">Last Name</label>
+                      <input id="lastName" type="text" formControlName="lastName" class="input" placeholder="Prince">
+                  </div>
+                  <div class="group">
+                      <label for="emailSignUp" class="label">Email Address</label>
+                      <input id="emailSignUp" type="text" formControlName="email" class="input" placeholder="annu@gmail.com">
+                  </div>
+                  <div class="group">
+                      <label for="passwordSignUp" class="label">Password</label>
+                      <input id="passwordSignUp" type="password" formControlName="password" class="input" placeholder="user" data-type="password">
+                  </div>
+                  <div class="group">
+                      <label for="phoneNo" class="label">Phone Number</label>
+                      <input id="phoneNo" type="text" formControlName="phone" class="input" placeholder="9123456780">
+                  </div>
+                  <div class="group">
+                      <label for="role" class="label">Role</label>
+                      <select id="role" formControlName="role" class="input">
+                          <option value="USER">USER</option>
+                          <option value="ADMIN">ADMIN</option>
+                      </select>
+                  </div>
+                  <div class="group">
+                      <input type="submit" class="button" value="Sign Up">
+                  </div>
+              </form>
+              <div class="hr"></div>
+              <div class="foot-lnk">
+                  <label for="tab-1">Already a Member?</label>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>

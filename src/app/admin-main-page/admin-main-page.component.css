@@ -1,0 +1,67 @@
+/* General styling for the main page container */
+.mainPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* background-color: #f9f9f9; */
+    /* padding: 20px; */
+}
+/* Styling for the notification section */
+.notifications {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding-top: -10px; */
+    padding: 20px;
+    /* padding-top: -20px; */
+    width: 100%;
+    max-width: 600px;
+    /* text-align: center; */
+}
+
+/* Heading for the notifications section */
+.notifications h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* List styling */
+.notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List items styling */
+.notifications ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on notification items */
+.notifications ul li:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+/* Button styling */
+.notifications ul li button {
+    background-color: #5d5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notifications ul li button:hover {
+    background-color: #444;
+}
